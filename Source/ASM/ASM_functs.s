@@ -172,7 +172,11 @@ call_svc FUNCTION
 	
 ; COUNT BITS SET TO 1 (BRIAN KERNIGHAN)
 	EXPORT brianKernighan
+<<<<<<< HEAD
 brianKernighan	PROC
+=======
+brianKernighan	FUNCTION
+>>>>>>> 1f3f6b219c9e229bb4d0a02efd2a8670e9eda931
 				;r0: number 
 				stmfd sp!, {r4-r5, lr}
 				
@@ -191,13 +195,21 @@ ciclo			;check if the number is not zero
 	
 endAlgo			mov r0, r4	
 				ldmfd sp!, {r4-r5, pc}
+<<<<<<< HEAD
 				ENDP
+=======
+				ENDFUNC
+>>>>>>> 1f3f6b219c9e229bb4d0a02efd2a8670e9eda931
 		
 		
 		
 ; CHECK IF NUMBER IS PRIME (LINEAR ALGO)
 	EXPORT isPrime
+<<<<<<< HEAD
 isPrime			PROC
+=======
+isPrime			FUNCTION
+>>>>>>> 1f3f6b219c9e229bb4d0a02efd2a8670e9eda931
 				stmfd sp!, {r4-r8, r10-r11, lr}
 				
 				;r0: number to test wether it's prime or not
@@ -234,12 +246,20 @@ not_primep		mov r0, #0
 				
 primep			mov r0, #1
 				ldmfd sp!, {r4-r8, r10-r11, pc}
+<<<<<<< HEAD
 				ENDP
+=======
+				ENDFUNC
+>>>>>>> 1f3f6b219c9e229bb4d0a02efd2a8670e9eda931
 					
 					
 ;MODULO OPERATRION WITH MLS
 	EXPORT calc_mod
+<<<<<<< HEAD
 calc_mod		PROC
+=======
+calc_mod		FUNCTION
+>>>>>>> 1f3f6b219c9e229bb4d0a02efd2a8670e9eda931
 				STMFD sp!,{r4-r8,r10-r11,lr}
 				;calculate r1 % r2
 				udiv r3, r1, r2 ;r3 = r1/r2
@@ -248,12 +268,20 @@ calc_mod		PROC
 				
 				LDMFD sp!,{r4-r8,r10-r11,pc}
 
+<<<<<<< HEAD
 				ENDP
+=======
+				ENDFUNC
+>>>>>>> 1f3f6b219c9e229bb4d0a02efd2a8670e9eda931
 					
 					
 ;CHECK IF LETTER IS LOWERCASE
 	EXPORT check_lowerCase
+<<<<<<< HEAD
 check_lowerCase		PROC
+=======
+check_lowerCase		FUNCTION
+>>>>>>> 1f3f6b219c9e229bb4d0a02efd2a8670e9eda931
 				STMFD sp!,{r4-r8,r10-r11,lr}
 				
 				cmp r0, #'a'
@@ -267,11 +295,19 @@ check_lowerCase		PROC
 
 nope			mov r0, #0
 				LDMFD sp!,{r4-r8,r10-r11,pc}
+<<<<<<< HEAD
 				ENDP
 
 ;CHECK IF LETTER IS UPPERCASE
 	EXPORT check_upperCase
 check_upperCase		PROC
+=======
+				ENDFUNC
+
+;CHECK IF LETTER IS UPPERCASE
+	EXPORT check_upperCase
+check_upperCase		FUNCTION
+>>>>>>> 1f3f6b219c9e229bb4d0a02efd2a8670e9eda931
 				STMFD sp!,{r4-r8,r10-r11,lr}
 				
 				cmp r0, #'A'
@@ -285,20 +321,36 @@ check_upperCase		PROC
 
 nope2			mov r0, #0
 				LDMFD sp!,{r4-r8,r10-r11,pc}
+<<<<<<< HEAD
 				ENDP
 					
 ;2's complement of a 32-bit number
 	EXPORT do_2_complement
 do_2_complement	PROC
+=======
+				ENDFUNC
+					
+;2's complement of a 32-bit number
+	EXPORT do_2_complement
+do_2_complement	FUNCTION
+>>>>>>> 1f3f6b219c9e229bb4d0a02efd2a8670e9eda931
 				STMFD sp!,{r4-r8,r10-r11,lr}	
 				;number in r0
 				mvn r0, r0
 				add r0, r0, #1
 				LDMFD sp!,{r4-r8,r10-r11,pc}	
+<<<<<<< HEAD
 				ENDP
 					
 ;2's complement of a 64-bit number in two registers
 do_2_complement_64	PROC
+=======
+				ENDFUNC
+					
+;2's complement of a 64-bit number in two registers
+	EXPORT do_2_complement_64
+do_2_complement_64	FUNCTION
+>>>>>>> 1f3f6b219c9e229bb4d0a02efd2a8670e9eda931
 				STMFD sp!,{r4-r8,r10-r11,lr}
 				;r0 UPPER 32 BITS
 				;r1 LOWER 32 BITS
@@ -316,7 +368,11 @@ do_2_complement_64	PROC
 				
 				;RESULT IN R0 (UPPER BITS) AND R1 (LOWER BITS)
 no_overflow		LDMFD sp!,{r4-r8,r10-r11,pc}
+<<<<<<< HEAD
 				ENDP
+=======
+				ENDFUNC
+>>>>>>> 1f3f6b219c9e229bb4d0a02efd2a8670e9eda931
 				
 					
 

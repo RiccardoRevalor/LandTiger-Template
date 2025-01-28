@@ -38,6 +38,53 @@ void represent_on_leds(unsigned int res, int position) {
     LED_Out(aus);
 }
 
+/* Bubble Sort in C */
+void bubbleSort_C(int array[], int size){
+	 int i,j;
+   for(i = 0; i<size; i++) {
+      int swaps = 0; //flag to detect any swap is there or not
+      for(j = 0; j<size-i-1; j++) {
+         if(array[j] > array[j+1]) { //when the current item is bigger than next
+            int temp;
+            temp = array[j];
+            array[j] = array[j+1];
+            array[j+1] = temp;
+            swaps = 1; //set swap flag
+         }
+      }
+      if(!swaps)
+         break; // No swap in this pass, so array is sorted
+   }
+}
+
+
+/* Selection Sort in C */
+void selectionSort(int arr[], int n) {
+		int i, j;
+    for (i = 0; i < n - 1; i++) {
+      
+        // Assume the current position holds
+        // the minimum element
+        int min_idx = i;
+        
+        // Iterate through the unsorted portion
+        // to find the actual minimum
+        for (j = i + 1; j < n; j++) {
+            if (arr[j] < arr[min_idx]) {
+              
+                // Update min_idx if a smaller element is found
+                min_idx = j;
+            }
+        }
+        
+        // Move minimum element to its
+        // correct position
+        int temp = arr[i];
+        arr[i] = arr[min_idx];
+        arr[min_idx] = temp;
+    }
+}
+
 /*
 chiamare vettori e cose definite in assembly
 extern char DATA_IN; //primo valore del vettore DATA_IN
